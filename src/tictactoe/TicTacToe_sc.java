@@ -106,6 +106,15 @@ public class TicTacToe_sc extends javax.swing.JFrame {
     private void reset() {
         for (int count = 1; count <= 9; count++) {
             setText(count, "");
+            jButton1.setBackground(Color.white);
+            jButton2.setBackground(Color.white);
+            jButton3.setBackground(Color.white);
+            jButton4.setBackground(Color.white);
+            jButton5.setBackground(Color.white);
+            jButton6.setBackground(Color.white);
+            jButton7.setBackground(Color.white);
+            jButton8.setBackground(Color.white);
+            jButton9.setBackground(Color.white);
         }
     }
 
@@ -115,35 +124,124 @@ public class TicTacToe_sc extends javax.swing.JFrame {
             text1 = getText(x * 3 + 1);
             text2 = getText(x * 3 + 2);
             text3 = getText(x * 3 + 3);
-            win_game(text1, text2, text3);
+            if (win_game(text1, text2, text3) != 0) {
+                trun_yellow(x * 3 + 1);
+                trun_yellow(x * 3 + 2);
+                trun_yellow(x * 3 + 3);
+                if (win_game(text1, text2, text3) == 1) {
+                    JOptionPane.showMessageDialog(this, "Player X wins!", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+                    xCount++;
+                    gameScore();
+                    reset();
+                } else {
+                    JOptionPane.showMessageDialog(this, "Player O wins!", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+                    oCount++;
+                    gameScore();
+                    reset();
+                }
+                break;
+            };
             text1 = getText(x + 1);
             text2 = getText(x + 4);
             text3 = getText(x + 7);
-            win_game(text1, text2, text3);
+            if (win_game(text1, text2, text3) != 0) {
+                trun_yellow(x + 1);
+                trun_yellow(x + 4);
+                trun_yellow(x + 7);
+                if (win_game(text1, text2, text3) == 1) {
+                    JOptionPane.showMessageDialog(this, "Player X wins!", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+                    xCount++;
+                    gameScore();
+                    reset();
+                } else {
+                    JOptionPane.showMessageDialog(this, "Player O wins!", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+                    oCount++;
+                    gameScore();
+                    reset();
+                }
+                break;
+            };
         }
         text1 = getText(1);
         text2 = getText(5);
         text3 = getText(9);
-        win_game(text1, text2, text3);
-        text1 = getText(3);
-        text2 = getText(5);
-        text3 = getText(7);
-        win_game(text1, text2, text3);
-    }
-
-    private void win_game(String text1, String text2, String text3) {
-        if (text1.equals(text2) && text2.equals(text3)) {
-            if (text1.equals("X")) {
+        if (win_game(text1, text2, text3) != 0) {
+            trun_yellow(1);
+            trun_yellow(5);
+            trun_yellow(9);
+            if (win_game(text1, text2, text3) == 1) {
                 JOptionPane.showMessageDialog(this, "Player X wins!", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
                 xCount++;
                 gameScore();
                 reset();
-            } else if (text1.equals("O")) {
+            } else {
                 JOptionPane.showMessageDialog(this, "Player O wins!", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
                 oCount++;
                 gameScore();
                 reset();
             }
+        };
+        text1 = getText(3);
+        text2 = getText(5);
+        text3 = getText(7);
+        if (win_game(text1, text2, text3) != 0) {
+            trun_yellow(3);
+            trun_yellow(5);
+            trun_yellow(7);
+            if (win_game(text1, text2, text3) == 1) {
+                JOptionPane.showMessageDialog(this, "Player X wins!", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+                xCount++;
+                gameScore();
+                reset();
+            } else {
+                JOptionPane.showMessageDialog(this, "Player O wins!", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+                oCount++;
+                gameScore();
+                reset();
+            }
+        };
+    }
+
+    private int win_game(String text1, String text2, String text3) {
+        if (text1.equals(text2) && text2.equals(text3)) {
+            if (text1.equals("X")) {
+                return 1;
+            } else if (text1.equals("O")) {
+                return 2;
+            }
+        }
+        return 0;
+    }
+
+    private void trun_yellow(int n) {
+        switch (n) {
+            case 1:
+                jButton1.setBackground(Color.yellow);
+                break;
+            case 2:
+                jButton2.setBackground(Color.yellow);
+                break;
+            case 3:
+                jButton3.setBackground(Color.yellow);
+                break;
+            case 4:
+                jButton4.setBackground(Color.yellow);
+                break;
+            case 5:
+                jButton5.setBackground(Color.yellow);
+                break;
+            case 6:
+                jButton6.setBackground(Color.yellow);
+                break;
+            case 7:
+                jButton7.setBackground(Color.yellow);
+                break;
+            case 8:
+                jButton8.setBackground(Color.yellow);
+                break;
+            case 9:
+                jButton9.setBackground(Color.yellow);
+                break;
         }
     }
 
@@ -209,6 +307,7 @@ public class TicTacToe_sc extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new java.awt.BorderLayout());
 
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("新細明體", 1, 96)); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -222,6 +321,7 @@ public class TicTacToe_sc extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setLayout(new java.awt.BorderLayout());
 
+        jButton2.setBackground(new java.awt.Color(255, 255, 255));
         jButton2.setFont(new java.awt.Font("新細明體", 1, 96)); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -235,6 +335,7 @@ public class TicTacToe_sc extends javax.swing.JFrame {
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setLayout(new java.awt.BorderLayout());
 
+        jButton3.setBackground(new java.awt.Color(255, 255, 255));
         jButton3.setFont(new java.awt.Font("新細明體", 1, 96)); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -245,9 +346,10 @@ public class TicTacToe_sc extends javax.swing.JFrame {
 
         jPanel2.add(jPanel5);
 
-        jPanel6.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel6.setBackground(new java.awt.Color(255, 204, 102));
         jPanel6.setLayout(new java.awt.BorderLayout());
 
+        jLabel2.setBackground(new java.awt.Color(102, 102, 102));
         jLabel2.setFont(new java.awt.Font("新細明體", 1, 48)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Player X:");
@@ -255,9 +357,10 @@ public class TicTacToe_sc extends javax.swing.JFrame {
 
         jPanel2.add(jPanel6);
 
-        jPanel7.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel7.setBackground(new java.awt.Color(255, 204, 102));
         jPanel7.setLayout(new java.awt.BorderLayout());
 
+        jlblPlayerX.setBackground(new java.awt.Color(102, 102, 102));
         jlblPlayerX.setFont(new java.awt.Font("新細明體", 1, 48)); // NOI18N
         jlblPlayerX.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jlblPlayerX.setText("0");
@@ -268,6 +371,7 @@ public class TicTacToe_sc extends javax.swing.JFrame {
         jPanel9.setBackground(new java.awt.Color(255, 255, 255));
         jPanel9.setLayout(new java.awt.BorderLayout());
 
+        jButton4.setBackground(new java.awt.Color(255, 255, 255));
         jButton4.setFont(new java.awt.Font("新細明體", 1, 96)); // NOI18N
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -281,6 +385,7 @@ public class TicTacToe_sc extends javax.swing.JFrame {
         jPanel10.setBackground(new java.awt.Color(255, 255, 255));
         jPanel10.setLayout(new java.awt.BorderLayout());
 
+        jButton5.setBackground(new java.awt.Color(255, 255, 255));
         jButton5.setFont(new java.awt.Font("新細明體", 1, 96)); // NOI18N
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -294,6 +399,7 @@ public class TicTacToe_sc extends javax.swing.JFrame {
         jPanel11.setBackground(new java.awt.Color(255, 255, 255));
         jPanel11.setLayout(new java.awt.BorderLayout());
 
+        jButton6.setBackground(new java.awt.Color(255, 255, 255));
         jButton6.setFont(new java.awt.Font("新細明體", 1, 96)); // NOI18N
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -304,9 +410,10 @@ public class TicTacToe_sc extends javax.swing.JFrame {
 
         jPanel2.add(jPanel11);
 
-        jPanel12.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel12.setBackground(new java.awt.Color(255, 204, 102));
         jPanel12.setLayout(new java.awt.BorderLayout());
 
+        jLabel3.setBackground(new java.awt.Color(102, 102, 102));
         jLabel3.setFont(new java.awt.Font("新細明體", 1, 48)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Player O:");
@@ -314,9 +421,10 @@ public class TicTacToe_sc extends javax.swing.JFrame {
 
         jPanel2.add(jPanel12);
 
-        jPanel13.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel13.setBackground(new java.awt.Color(255, 204, 102));
         jPanel13.setLayout(new java.awt.BorderLayout());
 
+        jlblPlayerO.setBackground(new java.awt.Color(102, 102, 102));
         jlblPlayerO.setFont(new java.awt.Font("新細明體", 1, 48)); // NOI18N
         jlblPlayerO.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jlblPlayerO.setText("0");
@@ -327,6 +435,7 @@ public class TicTacToe_sc extends javax.swing.JFrame {
         jPanel16.setBackground(new java.awt.Color(255, 255, 255));
         jPanel16.setLayout(new java.awt.BorderLayout());
 
+        jButton7.setBackground(new java.awt.Color(255, 255, 255));
         jButton7.setFont(new java.awt.Font("新細明體", 1, 96)); // NOI18N
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -340,6 +449,7 @@ public class TicTacToe_sc extends javax.swing.JFrame {
         jPanel17.setBackground(new java.awt.Color(255, 255, 255));
         jPanel17.setLayout(new java.awt.BorderLayout());
 
+        jButton8.setBackground(new java.awt.Color(255, 255, 255));
         jButton8.setFont(new java.awt.Font("新細明體", 1, 96)); // NOI18N
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -353,6 +463,7 @@ public class TicTacToe_sc extends javax.swing.JFrame {
         jPanel18.setBackground(new java.awt.Color(255, 255, 255));
         jPanel18.setLayout(new java.awt.BorderLayout());
 
+        jButton9.setBackground(new java.awt.Color(255, 255, 255));
         jButton9.setFont(new java.awt.Font("新細明體", 1, 96)); // NOI18N
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
