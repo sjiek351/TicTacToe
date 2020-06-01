@@ -129,12 +129,12 @@ public class TicTacToe_sc extends javax.swing.JFrame {
                 trun_yellow(x * 3 + 2);
                 trun_yellow(x * 3 + 3);
                 if (win_game(text1, text2, text3) == 1) {
-                    JOptionPane.showMessageDialog(this, "Player X wins!", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "玩家 X 贏了!", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
                     xCount++;
                     gameScore();
                     reset();
                 } else {
-                    JOptionPane.showMessageDialog(this, "Player O wins!", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "玩家 O 贏了!", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
                     oCount++;
                     gameScore();
                     reset();
@@ -149,12 +149,12 @@ public class TicTacToe_sc extends javax.swing.JFrame {
                 trun_yellow(x + 4);
                 trun_yellow(x + 7);
                 if (win_game(text1, text2, text3) == 1) {
-                    JOptionPane.showMessageDialog(this, "Player X wins!", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "玩家 X 贏了!", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
                     xCount++;
                     gameScore();
                     reset();
                 } else {
-                    JOptionPane.showMessageDialog(this, "Player O wins!", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "玩家 O 贏了!", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
                     oCount++;
                     gameScore();
                     reset();
@@ -170,12 +170,12 @@ public class TicTacToe_sc extends javax.swing.JFrame {
             trun_yellow(5);
             trun_yellow(9);
             if (win_game(text1, text2, text3) == 1) {
-                JOptionPane.showMessageDialog(this, "Player X wins!", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(this, "玩家 X 贏了!!", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
                 xCount++;
                 gameScore();
                 reset();
             } else {
-                JOptionPane.showMessageDialog(this, "Player O wins!", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(this, "玩家 O 贏了!", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
                 oCount++;
                 gameScore();
                 reset();
@@ -189,12 +189,12 @@ public class TicTacToe_sc extends javax.swing.JFrame {
             trun_yellow(5);
             trun_yellow(7);
             if (win_game(text1, text2, text3) == 1) {
-                JOptionPane.showMessageDialog(this, "Player X wins!", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(this, "玩家 X 贏了!", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
                 xCount++;
                 gameScore();
                 reset();
             } else {
-                JOptionPane.showMessageDialog(this, "Player O wins!", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(this, "玩家 O 贏了!", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
                 oCount++;
                 gameScore();
                 reset();
@@ -298,7 +298,7 @@ public class TicTacToe_sc extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("新細明體", 1, 100)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Tic Tac Toe");
+        jLabel1.setText("井 字 棋");
         jPanel1.add(jLabel1, java.awt.BorderLayout.PAGE_START);
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
@@ -352,7 +352,7 @@ public class TicTacToe_sc extends javax.swing.JFrame {
         jLabel2.setBackground(new java.awt.Color(102, 102, 102));
         jLabel2.setFont(new java.awt.Font("新細明體", 1, 48)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Player X:");
+        jLabel2.setText("玩家 X :");
         jPanel6.add(jLabel2, java.awt.BorderLayout.CENTER);
 
         jPanel2.add(jPanel6);
@@ -416,7 +416,7 @@ public class TicTacToe_sc extends javax.swing.JFrame {
         jLabel3.setBackground(new java.awt.Color(102, 102, 102));
         jLabel3.setFont(new java.awt.Font("新細明體", 1, 48)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Player O:");
+        jLabel3.setText("玩家 O :");
         jPanel12.add(jLabel3, java.awt.BorderLayout.CENTER);
 
         jPanel2.add(jPanel12);
@@ -478,7 +478,7 @@ public class TicTacToe_sc extends javax.swing.JFrame {
         jPanel19.setLayout(new java.awt.BorderLayout());
 
         jbtnReset.setFont(new java.awt.Font("新細明體", 1, 48)); // NOI18N
-        jbtnReset.setText("Reset");
+        jbtnReset.setText("重置");
         jbtnReset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnResetActionPerformed(evt);
@@ -492,7 +492,7 @@ public class TicTacToe_sc extends javax.swing.JFrame {
         jPanel15.setLayout(new java.awt.BorderLayout());
 
         jbtnExit.setFont(new java.awt.Font("新細明體", 1, 48)); // NOI18N
-        jbtnExit.setText("Exit");
+        jbtnExit.setText("離開");
         jbtnExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnExitActionPerformed(evt);
@@ -512,7 +512,7 @@ public class TicTacToe_sc extends javax.swing.JFrame {
 private JFrame frame;
     private void jbtnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnExitActionPerformed
         frame = new JFrame("Exit");
-        if (JOptionPane.showConfirmDialog(frame, "confirm if you want to exit!", "Tic Tac Toe", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_NO_OPTION) {
+        if (JOptionPane.showConfirmDialog(frame, "確定要離開嗎 ?", "Tic Tac Toe", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_NO_OPTION) {
             System.exit(0);
         }
     }//GEN-LAST:event_jbtnExitActionPerformed

@@ -52,7 +52,7 @@
               <Font name="&#x65b0;&#x7d30;&#x660e;&#x9ad4;" size="100" style="1"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Tic Tac Toe"/>
+            <Property name="text" type="java.lang.String" value="&#x4e95; &#x5b57; &#x68cb;"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
@@ -184,7 +184,7 @@
                       <Font name="&#x65b0;&#x7d30;&#x660e;&#x9ad4;" size="48" style="1"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="Player X:"/>
+                    <Property name="text" type="java.lang.String" value="&#x73a9;&#x5bb6; X :"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
@@ -327,7 +327,7 @@
                       <Font name="&#x65b0;&#x7d30;&#x660e;&#x9ad4;" size="48" style="1"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="Player O:"/>
+                    <Property name="text" type="java.lang.String" value="&#x73a9;&#x5bb6; O :"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
@@ -466,7 +466,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="&#x65b0;&#x7d30;&#x660e;&#x9ad4;" size="48" style="1"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Reset"/>
+                    <Property name="text" type="java.lang.String" value="&#x91cd;&#x7f6e;"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnResetActionPerformed"/>
@@ -493,7 +493,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="&#x65b0;&#x7d30;&#x660e;&#x9ad4;" size="48" style="1"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Exit"/>
+                    <Property name="text" type="java.lang.String" value="&#x96e2;&#x958b;"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnExitActionPerformed"/>
